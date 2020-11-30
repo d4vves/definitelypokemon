@@ -1,9 +1,9 @@
 const getAction = (actionList) => {
-    return actionList[Math.floor(Math.random() * Math.floor(actions.length))];
+    return actionList[Math.floor(Math.random() * Math.floor(actionList.length))];
 };
 
 const getAnimal = (animalList) => {
-    return animalList[Math.floor(Math.random() * Math.floor(animals.length))];
+    return animalList[Math.floor(Math.random() * Math.floor(animalList.length))];
 };
 
 const getPokemonName = (animal, action) => {
@@ -16,20 +16,16 @@ const getPokemonName = (animal, action) => {
 
     // if we have a smaller action length, leave it be. otherwise lets cut that up!
     if (action.length < actionSlice) {
-        console.log(`SMALL ACTION: ${action}`);
         action = action;
     } else {
         action = action.slice(0, actionSlice);
-        console.log(`NEW ACTION: ${action}`);
     };
 
     // if we have a smaller animal name length, leave it be. otherwise lets cut that up!
     if (animal.length < animalSlice) {
-        console.log(`SMALL ANIMAL: ${animal}`);
         animal = animal;
     } else {
         animal = animal.slice(0, animalSlice);
-        console.log(`NEW ANIMAL: ${animal}`);
     };
 
     // how about we flip between the order of the words?
@@ -40,4 +36,21 @@ const getPokemonName = (animal, action) => {
     };
 };
 
-module.exports = { getAnimal, getAction, getPokemonName };
+const getSentenceStructure = (sentenceList) => {
+    return sentenceList[Math.floor(Math.random() * Math.floor(sentenceList.length))];
+};
+
+const getExpletive = (expletiveList) => {
+    return expletiveList[Math.floor(Math.random() * Math.floor(expletiveList.length))];
+}
+
+const getTweet = (sentenceStructure, pokemonName, actionOne, actionTwo, randomInt, expletive) => {
+    let tweet = sentenceStructure.replace(/pokemonName/gi, pokemonName);
+    tweet = tweet.replace('actionOne', actionOne);
+    tweet = tweet.replace('actionTwo', `${actionTwo}'ed`);
+    tweet = tweet.replace('randomInt', randomInt);
+    tweet = tweet.replace('expletive', expletive);
+    return tweet;
+}
+
+module.exports = { getAnimal, getAction, getPokemonName, getSentenceStructure, getExpletive, getTweet };

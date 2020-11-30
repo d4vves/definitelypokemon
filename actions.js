@@ -24,7 +24,7 @@ const actions = [
     'lubricated',
     'luscious',
     'magical',
-    'moisten',
+    'moistened',
     'nimble',
     'obese',
     'power',
