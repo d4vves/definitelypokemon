@@ -44,13 +44,18 @@ const getExpletive = (expletiveList) => {
     return expletiveList[Math.floor(Math.random() * Math.floor(expletiveList.length))];
 }
 
-const getTweet = (sentenceStructure, pokemonName, actionOne, actionTwo, randomInt, expletive) => {
+const getEvent = (eventList) => {
+    return eventList[Math.floor(Math.random() * Math.floor(eventList.length))];
+}
+
+const getTweet = (sentenceStructure, pokemonName, actionOne, actionTwo, randomInt, expletive, event) => {
     let tweet = sentenceStructure.replace(/pokemonName/gi, pokemonName);
     tweet = tweet.replace('actionOne', actionOne);
     tweet = tweet.replace('actionTwo', `${actionTwo}ed`);
     tweet = tweet.replace('randomInt', randomInt);
     tweet = tweet.replace('expletive', expletive);
+    tweet = tweet.replace('event', event)
     return tweet;
 }
 
-module.exports = { getAnimal, getAction, getPokemonName, getSentenceStructure, getExpletive, getTweet };
+module.exports = { getAnimal, getAction, getPokemonName, getSentenceStructure, getExpletive, getEvent, getTweet };
