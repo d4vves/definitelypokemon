@@ -1,5 +1,5 @@
 const Twitter = require('twitter');
-const twitterConfig = require('./config');
+const twitterConfig = require('./lib/config');
 const Tweet = new Twitter(twitterConfig);
 const {
     getAnimal,
@@ -9,12 +9,12 @@ const {
     getTweet,
     getExpletive,
     getEvent,
-} = require('./helperFunctions');
-const actionList = require('./actions');
-const animalList = require('./animals');
-const expletiveList = require('./expletives');
-const sentenceList = require('./sentences');
-const eventList = require('./events');
+} = require('./utils/helperFunctions');
+const actionList = require('./lib/actions');
+const animalList = require('./lib/animals');
+const expletiveList = require('./lib/expletives');
+const sentenceList = require('./lib/sentences');
+const eventList = require('./lib/events');
 
 let sentenceStructure = getSentenceStructure(sentenceList);
 let pokemonName = getPokemonName(getAnimal(animalList), getAction(actionList));
