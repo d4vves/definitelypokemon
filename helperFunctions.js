@@ -47,7 +47,7 @@ const getExpletive = (expletiveList) => {
 const getTweet = (sentenceStructure, pokemonName, actionOne, actionTwo, randomInt, expletive) => {
     let tweet = sentenceStructure.replace(/pokemonName/gi, pokemonName);
     tweet = tweet.replace('actionOne', actionOne);
-    tweet = tweet.replace('actionTwo', `${actionTwo}'ed`);
+    tweet = tweet.replace('actionTwo', `${actionTwo}ed`);
     tweet = tweet.replace('randomInt', randomInt);
     tweet = tweet.replace('expletive', expletive);
     return tweet;
