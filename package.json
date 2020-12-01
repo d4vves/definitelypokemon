@@ -1,0 +1,25 @@
+{
+  "name": "definitelypokemon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d4vves/definitelypokemon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/d4vves/definitelypokemon/issues"
+  },
+  "homepage": "https://github.com/d4vves/definitelypokemon#readme"
+}

@@ -19,15 +19,15 @@ let actionOne = getAction(actionList);
 let actionTwo = getAction(actionList);
 let randomInt = Math.floor(Math.random() * 251);
 let expletive = getExpletive(expletiveList);
-let tweet = getTweet(sentenceStructure, pokemonName, actionOne, actionTwo, randomInt, expletive);
+let status = getTweet(sentenceStructure, pokemonName, actionOne, actionTwo, randomInt, expletive);
 
-Tweet.post("statuses/update", { tweet })
+Tweet.post("statuses/update", { status })
   .then((res) => {
     if (!res) return;
     console.log(res);
-    console.log(tweet);
+    console.log(status);
   })
   .catch((error) => {
-    console.log(`🚦 ${error} 🚦`);
+    console.log(`🚦 🚦`, error);
     throw error;
   });
