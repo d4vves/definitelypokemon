@@ -40,7 +40,7 @@ const postStatus = (status) => {
             console.log(`🚦 🚦`, error);
             throw error;
         });
-}
+};
 
 twitter.get('statuses/user_timeline', params)
     .then(res => {
@@ -52,7 +52,7 @@ twitter.get('statuses/user_timeline', params)
 
         if(firstWord === prevFirstWord) {
             status = getStatus();
-            postStatus(status)
+            postStatus(status);
         } else {
             postStatus(status);
         };
