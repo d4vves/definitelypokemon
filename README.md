@@ -1,1 +1,1 @@
-[@definitelypokemon](https://twitter.com/real_pokeman)
+Definitely Pokemon. [@real_pokemon](https://twitter.com/real_pokeman)
