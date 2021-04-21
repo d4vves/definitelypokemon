@@ -37,7 +37,7 @@ const getPokemonName = (animal, action) => {
 };
 
 const getSentenceStructure = (sentenceList) => {
-    return sentenceList[Math.floor(Math.random() * Math.floor(sentenceList.length))];
+    return `${sentenceList[Math.floor(Math.random() * Math.floor(sentenceList.length))]} #pokemon #definitelypokemon`;
 };
 
 const getExpletive = (expletiveList) => {
